@@ -1,0 +1,9 @@
+.opacity-invis {
+  opacity: 0;
+}
+.opacity-visible {
+  opacity: 1;
+}
+.font-weight-medium {
+  font-weight: 500;
+}

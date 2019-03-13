@@ -7,3 +7,11 @@
 .font-weight-medium {
   font-weight: 500;
 }
+.line {
+  background: #e8e8e8;
+  height: 1px;
+}
+.social-icon img {
+  width: 1.8rem;
+  height: 1.8rem;
+}

@@ -1,3 +1,10 @@
 {
-    "html.format.maxPreserveNewLines": null
+    "html.format.maxPreserveNewLines": null,
+    "less.compile": {
+        "compress": true, // true => remove surplus whitespace
+        "sourceMap": true, // true => generate source maps (.css.map files)
+        "out": true, // false => DON'T output .css files (overridable per-file, see below)
+        "ieCompat": true,
+        "autoprefixer": "> 5%"
+    }
 }

@@ -5,7 +5,7 @@ $(document).ready(() => {
         const imgClass = $img.attr('class');
         const imgUri = $img.attr('src');
         $.get(imgUri, (data) => {
-            let $svg = jQuery(data).find('svg');
+            let $svg = $(data).find('svg');
             $svg = $svg.attr('class', imgClass + ' replaced-svg');
             $svg = $svg.removeAttr('xmlns:a');
             $img.replaceWith($svg);
@@ -14,11 +14,11 @@ $(document).ready(() => {
 
     // slider
     $('#slider').owlCarousel({
-        // navigation: true, // Show next and prev buttons
         singleItem: true,
         items: 1,
     });
 
+    // slider popular
     const popularSlider = $('#popular-slider');
     popularSlider.owlCarousel({
         loop: true,
@@ -45,4 +45,36 @@ $(document).ready(() => {
         popularSlider.trigger('prev.owl.carousel');
     });
 
+
+    //product item hover
+    $('.product-item').hover(function () {
+            // over
+            const productHover = $(this).find('.product-hover');
+            productHover.animate({'opacity': 1}, 200);
+            productHover.removeClass('invisible');
+            $(this).find('.text-container').animate({'opacity': 0}, 200)
+        }, function () {
+            const productHover = $(this).find('.product-hover');
+            productHover.animate({'opacity': 0}, 200);
+            productHover.addClass('invisible');
+            $(this).find('.text-container').animate({'opacity': 1}, 200)
+        }
+    );
+    //navigation
+    $(document).ready(function ($) {
+        $('.stellarnav').stellarNav({
+            theme: 'light',
+            breakpoint: 768,
+            sticky: false, // makes nav sticky on scroll (desktop only)
+            position: 'static', // 'static', 'top', 'left', 'right' - when set to 'top', this forces the mobile nav to be placed absolutely on the very top of page
+            openingSpeed: 250, // how fast the dropdown should open in milliseconds
+            closingDelay: 250, // controls how long the dropdowns stay open for in milliseconds
+            showArrows: true, // shows dropdown arrows next to the items that have sub menus
+            locationBtn: '', // adds a location link to the top of menu - i.e.: "/location/", "http://site.com/contact-us/"
+            locationLabel: 'Location', // label for the location button
+            closeBtn: false, // adds a close button to the end of nav
+            mobileMode: false,
+            scrollbarFix: false // fixes horizontal scrollbar issue on very long navs
+        });
+    });
 });

@@ -72,6 +72,7 @@ $(document).ready(() => {
             showArrows: true, // shows dropdown arrows next to the items that have sub menus
             locationBtn: '', // adds a location link to the top of menu - i.e.: "/location/", "http://site.com/contact-us/"
             locationLabel: 'Location', // label for the location button
+            menuLabel: '',
             closeBtn: false, // adds a close button to the end of nav
             mobileMode: false,
             scrollbarFix: false // fixes horizontal scrollbar issue on very long navs

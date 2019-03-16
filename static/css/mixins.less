@@ -1,7 +1,9 @@
 .transition(@sec: 200ms) {
     transition: all @sec ease-in-out;
 }
-
+.to_rem(@px) {
+    
+}
 .opacity-invis{
     opacity: 0;
 }
@@ -21,4 +23,19 @@
 .social-icon img{
     width: 1.8rem;
     height: 1.8rem;
+}
+.style-line{
+    height: 5px!important;
+}
+
+.rotate-135{
+    .transition();
+    transform: rotate(135deg);
+}
+.rotate-135-minus{
+    .transition();
+    transform: rotate(-135deg);
+}
+.top-5px{
+    top: 5px;
 }

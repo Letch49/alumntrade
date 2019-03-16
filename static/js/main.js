@@ -48,17 +48,17 @@ $(document).ready(() => {
 
     //product item hover
     $('.product-item').hover(function () {
-            // over
-            const productHover = $(this).find('.product-hover');
-            productHover.animate({'opacity': 1}, 200);
-            productHover.removeClass('invisible');
-            $(this).find('.text-container').animate({'opacity': 0}, 200)
-        }, function () {
-            const productHover = $(this).find('.product-hover');
-            productHover.animate({'opacity': 0}, 200);
-            productHover.addClass('invisible');
-            $(this).find('.text-container').animate({'opacity': 1}, 200)
-        }
+        // over
+        const productHover = $(this).find('.product-hover');
+        productHover.animate({ 'opacity': 1 }, 200);
+        productHover.removeClass('invisible');
+        $(this).find('.text-container').animate({ 'opacity': 0 }, 200)
+    }, function () {
+        const productHover = $(this).find('.product-hover');
+        productHover.animate({ 'opacity': 0 }, 200);
+        productHover.addClass('invisible');
+        $(this).find('.text-container').animate({ 'opacity': 1 }, 200)
+    }
     );
     //navigation
     $(document).ready(function ($) {
@@ -72,10 +72,24 @@ $(document).ready(() => {
             showArrows: true, // shows dropdown arrows next to the items that have sub menus
             locationBtn: '', // adds a location link to the top of menu - i.e.: "/location/", "http://site.com/contact-us/"
             locationLabel: 'Location', // label for the location button
-            menuLabel: 'Меню',
+            menuLabel: '',
             closeBtn: false, // adds a close button to the end of nav
             mobileMode: false,
             scrollbarFix: false // fixes horizontal scrollbar issue on very long navs
         });
     });
+
+    $('#cityModal').find('.select').on('change', function (e) {
+        const city = JSON.parse(e.target.value)['city'];
+        const tel = JSON.parse(e.target.value)['num'];
+        document.querySelector('#city').innerHTML = city;
+        document.querySelector('#tel').innerHTML = tel;
+        $('#cityModal').modal('hide');
+        localStorage.setItem('header-info', e.target.value);
+    });
+
+    if (localStorage.getItem('header-info')) {
+        document.querySelector('#city').innerHTML = JSON.parse(localStorage.getItem('header-info'))['city'];
+        document.querySelector('#tel').innerHTML = JSON.parse(localStorage.getItem('header-info'))['num'];
+    }
 });

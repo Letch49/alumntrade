@@ -30,8 +30,8 @@
                     </div>
                     <div class="col-lg-7 col-md-12 order-sm-3 order-lg-2 order-xl-2 col-12 order-3">
                         <div class="stellarnav navmenu d-flex flex-wrap justify-content-around align-items-center">
-                            <div class="col-6 d-block d-md-none d-lg-none d-xl-none order-0">
-                                <a href="/"><img src="static/img/logo.png" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                            <div class="col-9 d-block d-md-none d-lg-none d-xl-none order-0">
+                                <a href="/" class="d-flex justify-content-end"><img src="static/img/logo.png" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
                             </div>
                             <ul class="d-lg-flex justify-content-around align-items-center">
                                 <li class="nav-first"><a href="#">О компании</a></li>
@@ -65,9 +65,9 @@
                     <div class="col-lg-2 col-md-6 order-sm-2 col-7 order-2 d-none d-md-block d-lg-block d-xl-block">
                         <div class="map w-100 text-right">
                             <img src="static/img/maps-and-flags.svg" class="svg">
-                            <span id="city" style="font-size: 0.8rem; border-bottom: 1px dashed gray" class="text-muted">Владивосток</span>
+                            <a id="city" class="text-muted" href="#" data-toggle="modal" data-target="#cityModal">Владивосток</a>
                         </div>
-                        <a href="tel:+74232620096" style="font-size: 1.2rem;" class="text-right w-100 d-inline-block text-dark">+7(423) 262-00-96</a>
+                        <a href="tel:+74232620096" id="tel" class="text-right w-100 d-inline-block text-dark">+7(423) 262-00-96</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <img src="static/img/line.svg" class="w-100 m-0 align-bottom d-flex">
+                        <div class="w-100 d-flex align-bottom style-line" style="background: url('static/img/line.svg') 50% 50%;"></div>
                     </div>
                 </div>
             </div>
@@ -119,16 +119,17 @@
                     <div class="col-lg-4">
                         <div class="point d-flex  mb-4">
                             <div class="img-container d-flex justify-content-center align-items-center p-3 mr-3 b1">
-                                <img src="static/img/i-first.svg">
+                                <div style="background-image: url('static/img/i-first.svg');" class="img"></div>
                             </div>
-                            <p class="card-description font-weight-light">"АлюмТрейд - Эксклюзивный дистрибьютор фирмы "Алютех" и единственный официальный сервисный центр на Дальнем Востоке"</p>
+                            <p class="card-description font-weight-light">АлюмТрейд - Эксклюзивный дистрибьютор фирмы Алютех и единственный официальный сервисный центр на Дальнем Востоке</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="point d-flex mb-4">
                             <div class="img-container d-flex justify-content-center align-items-center p-3 mr-3 b2">
-                                <img src="static/img/i-windows.svg">
+                                <div style="background-image: url('static/img/i-windows.svg')" class="img"></div>
+
                             </div>
                             <p class="card-description font-weight-light">"Эксклюзивный дистрибьютор систем для изготовления ПВХ окон Funke <br> и Novotex"</p>
                         </div>
@@ -137,7 +138,7 @@
                     <div class="col-lg-4">
                         <div class="point d-flex mb-4">
                             <div class="img-container d-flex justify-content-center align-items-center p-3 mr-3 b3">
-                                <img src="static/img/i-calc.svg">
+                                <div style="background-image: url('static/img/i-calc.svg')" class="img"></div>
                             </div>
                             <p class="card-description font-weight-light">Подберём грамотные технические решения, проконсультируем и рассчитаем точную стоимость</p>
                         </div>
@@ -160,7 +161,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-8 col-xl-8  col-12 d-flex flex-wrap pl-0 secondary flex-lg-row">
                         <div class="col-lg-4 col-xl-4 col-12 col-md-6 pr-0 mb-3">
                             <div class="product-item w-100 position-relative">
@@ -248,15 +248,15 @@
             </div>
 
             <div class="bg-light mb-4">
-                <div class="container py-5">
+                <div class="container py-4">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h2 class="h4 font-weight-bold">Популярная продукция</h2>
+                            <h2 class="h5 font-weight-bold">Популярная продукция</h2>
                         </div>
                         <div class="col-lg-6 col-md-6 d-none d-mb-flex d-lg-flex d-xl-flex justify-content-end">
                             <div class="popular-nav d-flex justify-align-center align-items-center">
-                                <div class="pop-prev mr-2 p-1 d-flex justify-align-center align-items-center"><img src="/static/img/Arrow.svg" class="svg w-100 h-100"></div>
-                                <div class="pop-next p-1 d-flex justify-align-center align-items-center"><img src="/static/img/Arrow.svg" class="svg w-100 h-100"></div>
+                                <div class="pop-prev mr-2 p-1 d-flex justify-align-center align-items-center"><img src="static/img/Arrow.svg" class="svg w-100 h-100 arrow"></div>
+                                <div class="pop-next p-1 d-flex justify-align-center align-items-center"><img src="static/img/Arrow.svg" class="svg w-100 h-100 arrow"></div>
                             </div>
                         </div>
 
@@ -264,39 +264,39 @@
                             <div class="py-3 owl-carousel owl-theme owl-loaded" id="popular-slider">
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
 
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/2-avtomatika.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
 
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/3-alum.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/4-per.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/5-forgot.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
                                 <div class="item p-4 bg-white my-3 ">
                                     <img src="media/7-dalaran.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4" style="max-height: 8rem;">
-                                    <h3 class="h6 text-center w-100 font-weight-normal">Гаражные ворота TREND</h3>
+                                    <h3 class="h6 text-center font-weight-normal">Гаражные ворота TREND</h3>
                                     <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
                                     <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
                                 </div>
@@ -308,14 +308,14 @@
 
             <div class="container mb-5">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-xl-3 col-12 mr-lg-4 d-none d-md-block d-lg-block d-xl-block">
-                        <img src="static/img/about.svg" alt="О компании" class="img-fluid pt-2 px-4 ">
+                    <div class="col-lg-3 col-md-3 col-xl-3 col-12 mr-lg-4 d-none d-md-none d-lg-block d-xl-block">
+                        <img src="static/img/about.svg" alt="О компании" class="pt-2 px-4 about-image">
                     </div>
-                    <div class="col-lg-8 col-md-8 col-xl-8 col-12">
+                    <div class="col-lg-8 col-md-12 col-xl-8 col-12">
                         <article>
                             <h2 class="mb-4 h3 font-weight-bold">О компании</h2>
                             <p class="font-weight-light float-left">
-                                <img src="static/img/about.svg" alt="О компании" class="w-25 float-left m-3 d-block d-md-none d-lg-none d-xl-none">
+                                <img src="static/img/about.svg" alt="О компании" class="w-25 float-left m-3 d-block d-md-block d-lg-none d-xl-none">
                                 Мы устанавливаем рольставни, въездные и гаражные автоматические ворота, автоматические шлагбаумы и автоматику для них с 1999 года. За это время нами накоплен уникальный опыт в изготовлении
                                 данного вида продукции, открыто собственное производство, налажены партнерские связи, наработана значительная клиентская база. К услугам нашей компании в разное время обращались «Лужники»,
                                 «Госзнак», METRO, «Атриум», «Вимм-Билль-Данн», «Арманд-Пежо», «Перекресток», ГУМ, «Тринити Моторс» и многие другие компании. <br> <br>
@@ -338,11 +338,11 @@
             <div class="container mb-5">
                 <div class="row" id="last-news">
                     <div class="col-12 mb-4">
-                        <h2 class="h5 text-capitalizes">Последние новости</h2>
+                        <h2 class="h5 font-weight-bold">Последние новости</h2>
                     </div>
                     <div class="col-lg-4 col-md-4 col-12 mb-5">
                         <article class="last-news-article">
-                            <img src="media/ln-1.webp" alt="..." class="img-fluid">
+                            <img src="media/3-alum.webp" alt="..." class="img-fluid">
                             <a href="#" class="text-uppercase my-3 text-white category w-auto d-inline-block py-0 px-2">новости</a>
                             <h3><a href="#" class="d-inline-block text-dark mb-3 font-weight-medium link h6">Новый сборник кратких интсрукций по настройке автоматики ALUTECH</a></h3>
                             <time datetime="2019-03-09" title="2019-03-09" class="text-muted font-weight-light" style="font-size: 0.8rem;">16 явнаря 2019</time>
@@ -351,7 +351,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12 mb-5">
                         <article class="last-news-article">
-                            <img src="media/ln-2.webp" alt="..." class="img-fluid">
+                            <img src="media/4-per.webp" alt="..." class="img-fluid">
                             <a href="#" class="text-uppercase my-3 text-white category w-auto d-inline-block py-0 px-2">новости</a>
                             <h3><a href="#" class="d-inline-block text-dark mb-3 font-weight-medium link h6">Новый сборник кратких интсрукций по настройке автоматики ALUTECH</a></h3>
                             <time datetime="2019-03-09" title="2019-03-09" class="text-muted font-weight-light" style="font-size: 0.8rem;">16 явнаря 2019</time>
@@ -360,7 +360,7 @@
 
                     <div class="col-lg-4 col-md-4 col-12 mb-5">
                         <article class="last-news-article">
-                            <img src="media/ln-3.webp" alt="..." class="img-fluid">
+                            <img src="media/5-forgot.webp" alt="..." class="img-fluid">
                             <a href="#" class="text-uppercase my-3 text-white category w-auto d-inline-block py-0 px-2">новости</a>
                             <h3><a href="#" class="d-inline-block text-dark mb-3 font-weight-medium link h6">Новый сборник кратких интсрукций по настройке автоматики ALUTECH</a></h3>
                             <time datetime="2019-03-09" title="2019-03-09" class="text-muted font-weight-light" style="font-size: 0.8rem;">16 явнаря 2019</time>
@@ -374,19 +374,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img src="static/img/line.svg" class="w-100 m-0 align-bottom d-flex pb-2 mb-4">
+                        <div class="w-100 d-flex align-bottom mb-4 style-line" style="background: url('static/img/line.svg') 50% 50%;"></div>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 order-4 order-md-1 order-lg-1 order-xl-1">
                         <ul class="list-unstyled font-weight-light">
                             <li class="">Следите за нами в соц. сетях:</li>
                             <li class="my-3">
-                                <a href="https://facebook.com" class="mr-3 social-icon"> <img src="/static/img/icon-facebook.svg"> </a>
-                                <a href="https://vk.com/" class="mr-3 social-icon"><img src="/static/img/icon-vk.svg"></a>
-                                <a href="https://instagram.com" class="mr-3 social-icon"><img src="/static/img/icon-instagram.svg"></a>
+                                <a href="https://facebook.com" class="mr-3 social-icon fb"></a>
+                                <a href="https://vk.com/" class="mr-3 social-icon vk"></a>
+                                <a href="https://instagram.com" class="mr-3 social-icon insta"></a>
                             </li>
                             <li class="d-flex flex-column">
                                 <a href="/" class="text-dark text-decoration-none">&#169; 2019, "Алюмтрейд"</a>
@@ -394,7 +394,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 oreder-1 order-md-1 order-lg-1 order-xl-1">
                         <ul class="list-unstyled font-weight-light">
                             <li class="mb-3"> <a href="#" class="text-dark">Воротные системы</a></li>
                             <li class="mb-3"> <a href="#" class="text-dark">Роллетные системы</a></li>
@@ -402,29 +402,53 @@
                             <li class="mb-3"> <a href="#" class="text-dark">Алюминевые профильные системы</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 order-2 order-md-1 order-lg-1 order-xl-1">
                         <ul class="list-unstyled font-weight-light">
                             <li class="mb-3"> <a href="#" class="text-dark">Перегрузочное оборудование</a></li>
                             <li class="mb-3"> <a href="#" class="text-dark">противопожарные системы</a></li>
                             <li class="mb-3"> <a href="#" class="text-dark">Комплектующие и профили для производства окон ПВХ</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 order-3 order-md-1 order-lg-1 order-xl-1">
                         <ul class="list-unstyled font-weight-light">
-                            <li class="mb-1"> <span class="mr-2">Владивосток:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img src="/static/img/phone-receiver.svg" class="svg phone">
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Владивосток:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img
+                                        src="static/img/phone-receiver.svg" class="svg phone">
                                     +7
                                     (423) 262-00-96</a></li>
-                            <li class="mb-1"> <span class="mr-2">Хабаровск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img src="/static/img/phone-receiver.svg" class="svg phone"> +7
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Хабаровск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img
+                                        src="static/img/phone-receiver.svg" class="svg phone"> +7
                                     (423) 262-00-96</a></li>
-                            <li class=""> <span class="mr-2">Благовещенск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img src="/static/img/phone-receiver.svg" class="svg phone"> +7
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Благовещенск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link"> <img
+                                        src="static/img/phone-receiver.svg" class="svg phone"> +7
                                     (423)
                                     262-00-96</a></li>
-                            <li class="d-flex justify-content-end align-items-center">Разработка сайта - <a href="https://atomagency.ru/" class="pl-3"><img src="/static/img/atom.svg" alt="atom" class="atom"></a></li>
+                            <li class="mb-3 mt-md-3 d-lg-flex justify-content-end align-items-center">Разработка сайта - <a href="https://atomagency.ru/" class="ml-sm-3 ml-0"><img src="static/img/atom.svg" alt="atom"
+                                        class="atom"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h6" id="cityModalLabel">Выберите город</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-control form-control-sm select">
+                        <option value='{"num":"+7(423) 262-00-96", "city": "Владивосток"}'>Владивосток</option>
+                        <option value='{"num":"+7(423) 262-00-96", "city": "Хабаровск"}'>Хабаровск</option>
+                        <option value='{"num":"+7(423) 262-00-96", "city": "Благовещенск"}'>Благовещенск</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -434,7 +458,7 @@
     <!--owl-->
     <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
     <!--stellarnav-->
-    <script src="static/lib/stellarnav/js/stellarnav.min.js"></script>
+    <script src="static/lib/stellarnav/js/stellarnav.js"></script>
     <script src="static/js/main.js"></script>
 </body>
 

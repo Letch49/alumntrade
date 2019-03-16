@@ -5,7 +5,6 @@
 @color-salad: #bdcb02;
 @color-orange: #fbb600;
 @color-blue: #67b5dd;
-
 html,
 body {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -14,12 +13,14 @@ body {
         font-size: 0.9em;
     }
 }
+
 .navmenu {
     font-size: 0.9rem;
     .transition();
     li:not(.calc-border) {
         &.nav-first {
             padding: 5px 10px;
+            .transition();
             &:hover {
                 background: @color-blue;
                 &>a {
@@ -34,6 +35,7 @@ body {
         padding: 2px;
     }
     li ul {
+        font-size: 0.9rem;
         position: absolute;
         left: -10%;
         border: 1px solid #e6e6e6;
@@ -106,7 +108,7 @@ body {
         }
     }
     @media (max-width: 768px) {
-        ul{
+        ul {
             width: 100%;
         }
         .calc-border {
@@ -172,6 +174,22 @@ body {
         }
     }
 }
+
+a#city {
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-bottom: 1px dashed gray;
+    .transition();
+    &:hover {
+        text-decoration: none;
+        border-bottom: none;
+    }
+}
+
+a#tel {
+    font-size: 1.2rem;
+}
+
 .calc-svg {
     width: 1.4rem !important;
     height: 1.4rem !important;
@@ -191,20 +209,33 @@ body {
             width: 100%;
             height: 470px;
             display: block;
+            object-fit: cover;
+            @media (max-width: 320px) {
+                height: 380px;
+            }
         }
         .item-content {
             background: rgba(255, 255, 255, 0.8);
             position: absolute;
             z-index: 1;
             top: 8rem; // margin-left: 2rem;
+            @media (max-width: 320px) {
+                top: 3rem;
+            }
             max-width: 36rem;
             p {
                 font-weight: 300;
+                @media (max-width: 320px) {
+                    font-size: 0.8rem;
+                }
             }
             a.btn {
                 background: linear-gradient(to right, #d70b51, #a91e5d);
                 background: -webkit-linear-gradient(to right, #d70b51, #a91e5d);
                 background: -moz-linear-gradient(to right, #d70b51, #a91e5d);
+                @media (max-width: 320px) {
+                    font-size: 0.9rem;
+                }
             }
             &::before {
                 content: '';
@@ -245,10 +276,14 @@ body {
 
 // points
 .point {
-    height: 8rem;
+    height: convert(84px, 'rem');
+    width: covert(84px, 'rem');
     .img-container {
-        img {
-            width: 5rem;
+        .img {
+            width: convert(48px, 'rem');
+            height: convert(48px, 'rem');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
         }
         border-width: 2px;
         border-style: solid;
@@ -271,6 +306,13 @@ body {
             border-image-slice: 1;
         }
     }
+    .card-description {
+        font-size: 0.85rem;
+    }
+}
+
+.about-image {
+    width: 270px;
 }
 
 // Продукты
@@ -319,8 +361,7 @@ body {
         opacity: 0;
         top: 0;
         left: 0;
-        background: rgba(red(@color-blue), green(@color-blue), blue(@color-blue), 0.8);
-        // .transition();
+        background: rgba(red(@color-blue), green(@color-blue), blue(@color-blue), 0.8); // .transition();
         p {
             font-size: 0.65rem;
         }
@@ -340,6 +381,10 @@ body {
             fill: #686868;
         }
         cursor: pointer;
+        &:hover {
+            .transition();
+            background: #c7c7c7;
+        }
     }
     .pop-prev svg {
         transform: rotate(180deg);
@@ -351,6 +396,12 @@ body {
     .item {
         // border: 1px solid #e0e0e0;
         .transition();
+        h3 {
+            .transition();
+            &:hover {
+                text-decoration: underline;
+            }
+        }
         &:hover {
             box-shadow: 0 8px 29px rgba(0, 0, 0, 0.1);
             background: rgba(0, 0, 0, 0) !important;
@@ -400,6 +451,22 @@ body {
 }
 
 footer {
+    .social-icon {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        background-repeat: no-repeat;
+        &.fb {
+            background-image: url('../img/icon-facebook.svg');
+        }
+        &.vk {
+            background-image: url('../img/icon-vk.svg');
+        }
+        &.insta {
+            background-image: url('../img/icon-instagram.svg');
+        }
+    }
     ul>li {
         font-size: 0.8rem;
     }
@@ -413,6 +480,5 @@ footer {
     }
     .atom {
         width: 4rem;
-        height: 4rem;
     }
 }

@@ -188,6 +188,9 @@ a#city {
 
 a#tel {
     font-size: 1.2rem;
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 }
 
 .calc-svg {
@@ -386,7 +389,7 @@ a#tel {
             background: #c7c7c7;
         }
     }
-    .pop-prev svg {
+    .pop-prev {
         transform: rotate(180deg);
     }
 }
@@ -395,13 +398,10 @@ a#tel {
     @color-salad: #afc435;
     .item {
         // border: 1px solid #e0e0e0;
-        .transition();
-        h3 {
-            .transition();
-            &:hover {
-                text-decoration: underline;
-            }
+        img {
+            max-height: 8rem;
         }
+        .transition();
         &:hover {
             box-shadow: 0 8px 29px rgba(0, 0, 0, 0.1);
             background: rgba(0, 0, 0, 0) !important;
@@ -448,6 +448,9 @@ a#tel {
         height: 10rem;
         width: 100%;
     }
+    time {
+        font-size: 0.8rem;
+    }
 }
 
 footer {
@@ -477,6 +480,11 @@ footer {
     }
     .phone-link {
         font-size: 1rem;
+        background-image: url('../img/phone-receiver.svg');
+        background-position: left;
+        background-repeat: no-repeat;
+        padding-left: 1.2rem;
+        background-size: .9rem;
     }
     .atom {
         width: 4rem;

@@ -4,12 +4,25 @@ $(document).ready(() => {
         const $img = $(el);
         const imgClass = $img.attr('class');
         const imgUri = $img.attr('src');
-        $.get(imgUri, (data) => {
-            let $svg = $(data).find('svg');
-            $svg = $svg.attr('class', imgClass + ' replaced-svg');
-            $svg = $svg.removeAttr('xmlns:a');
-            $img.replaceWith($svg);
-        }, 'xml');
+        $.ajax({
+            type: "get",
+            url: imgUri,
+            data: "data",
+            crossDomian: true,
+            dataType: "xml",
+            success: function (response) {
+                let $svg = $(response).find('svg');
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+                $svg = $svg.removeAttr('xmlns:a');
+                $img.replaceWith($svg);
+            }
+        });
+        // $.get(imgUri, (data) => {
+        //     let $svg = $(data).find('svg');
+        //     $svg = $svg.attr('class', imgClass + ' replaced-svg');
+        //     $svg = $svg.removeAttr('xmlns:a');
+        //     $img.replaceWith($svg);
+        // }, 'xml');
     });
 
     // slider

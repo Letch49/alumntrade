@@ -10,21 +10,14 @@ $(document).ready(() => {
             data: "data",
             crossDomian: true,
             dataType: "xml",
-            success: function (response) {
+            success: (response) => {
                 let $svg = $(response).find('svg');
                 $svg = $svg.attr('class', imgClass + ' replaced-svg');
                 $svg = $svg.removeAttr('xmlns:a');
                 $img.replaceWith($svg);
             }
         });
-        // $.get(imgUri, (data) => {
-        //     let $svg = $(data).find('svg');
-        //     $svg = $svg.attr('class', imgClass + ' replaced-svg');
-        //     $svg = $svg.removeAttr('xmlns:a');
-        //     $img.replaceWith($svg);
-        // }, 'xml');
     });
-
     // slider
     $('#slider').owlCarousel({
         singleItem: true,
@@ -57,11 +50,8 @@ $(document).ready(() => {
     $('.pop-prev').click(() => {
         popularSlider.trigger('prev.owl.carousel');
     });
-
-
     //product item hover
     $('.product-item').hover(function () {
-        // over
         const productHover = $(this).find('.product-hover');
         productHover.animate({ 'opacity': 1 }, 200);
         productHover.removeClass('invisible');
@@ -71,8 +61,7 @@ $(document).ready(() => {
         productHover.animate({ 'opacity': 0 }, 200);
         productHover.addClass('invisible');
         $(this).find('.text-container').animate({ 'opacity': 1 }, 200)
-    }
-    );
+    });
     //navigation
     $(document).ready(function ($) {
         $('.stellarnav').stellarNav({
@@ -91,16 +80,21 @@ $(document).ready(() => {
             scrollbarFix: false // fixes horizontal scrollbar issue on very long navs
         });
     });
-
-    $('#cityModal').find('.select').on('change', function (e) {
-        const city = JSON.parse(e.target.value)['city'];
-        const tel = JSON.parse(e.target.value)['num'];
+    // change city and phone in header
+    $('#cityModal').find('a.city').click(el => {
+        el.preventDefault();
+        const tel = $(el.target).data('value');
+        const city = $(el.target).text();
         document.querySelector('#city').innerHTML = city;
         document.querySelector('#tel').innerHTML = tel;
         $('#cityModal').modal('hide');
-        localStorage.setItem('header-info', e.target.value);
+        const dataLocalStorage = JSON.stringify({
+            "city": city,
+            "num": tel
+        });
+        localStorage.setItem('header-info', dataLocalStorage);
     });
-
+    // change city if localStorage not undefined
     if (localStorage.getItem('header-info')) {
         document.querySelector('#city').innerHTML = JSON.parse(localStorage.getItem('header-info'))['city'];
         document.querySelector('#tel').innerHTML = JSON.parse(localStorage.getItem('header-info'))['num'];

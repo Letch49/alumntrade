@@ -15,12 +15,21 @@ body {
 }
 
 .navmenu {
-    font-size: 0.9rem;
-    .transition();
+    font-size: 0.9rem; // .transition();
+    @media (min-width: 768px) {
+        .calc-border:hover {
+            background: @color-salad;
+            a {
+                color: white;
+            }
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
     li:not(.calc-border) {
         &.nav-first {
-            padding: 5px 10px;
-            .transition();
+            padding: 5px 10px; // .transition();
             &:hover {
                 background: @color-blue;
                 &>a {
@@ -28,6 +37,9 @@ body {
                 }
             }
         }
+    }
+    li a {
+        transition: none !important;
     }
     .calc-border {
         border: 1px solid @color-salad;
@@ -103,8 +115,7 @@ body {
             content: '';
             border-bottom-color: rgb(255, 255, 255);
             border-width: 8px;
-            margin-left: -12px;
-            box-shadow: 0 11px 29px rgba(0, 0, 0, .1);
+            margin-left: -12px; // box-shadow: 0 11px 29px rgba(0, 0, 0, .1);
         }
     }
     @media (max-width: 768px) {
@@ -478,15 +489,57 @@ footer {
         height: 0.8rem;
         fill: @color-salad;
     }
-    .phone-link {
-        font-size: 1rem;
-        background-image: url('../img/phone-receiver.svg');
-        background-position: left;
-        background-repeat: no-repeat;
-        padding-left: 1.2rem;
-        background-size: .9rem;
-    }
     .atom {
         width: 4rem;
+    }
+}
+
+.phone-link {
+    font-size: 1rem;
+    background-image: url('../img/phone-receiver.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 1.2rem;
+    background-size: .9rem;
+}
+
+// Breadcrumb
+.breadcrumb {
+    background-color: transparent;
+    li,
+    li a {
+        color: inherit;
+    }
+}
+
+// gde kupit
+#map-change {
+    position: absolute;
+    z-index: 100;
+    top: 4.7rem;
+    left: 2rem;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, .1);
+    border: none;
+    border-radius: 0;
+    width: 220px;
+    @media (max-width: 470px) {
+        top: 6.5rem;
+    }
+}
+
+.map-container {
+    height: 375px;
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+}
+
+.my-table {
+    thead tr{
+        background: #f1f1f1;
+    }
+    font-size: 0.8rem;
+    @media (max-width: 992px) {
+        width: 750px;
     }
 }

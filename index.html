@@ -8,7 +8,7 @@
     <meta name="keywords" content="Ключевые слова для поисковиков">
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <title>alumtrade</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -26,12 +26,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 order-sm-1 col-5 order-1 d-none d-md-block d-lg-block d-xl-block">
-                        <a href="/"><img src="static/img/logo.png" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                        <a href="/"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
                     </div>
                     <div class="col-lg-7 col-md-12 order-sm-3 order-lg-2 order-xl-2 col-12 order-3 pr-0">
-                        <div class="stellarnav navmenu d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="stellarnav navmenu d-flex flex-wrap justify-content-around align-items-center">
                             <div class="col-9 d-block d-md-none d-lg-none d-xl-none order-0">
-                                <a href="/" class="d-flex justify-content-end"><img src="static/img/logo.png" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                                <a href="/" class="d-flex justify-content-end"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
                             </div>
                             <ul class="d-lg-flex justify-content-between align-items-center">
                                 <li class="nav-first"><a href="#">О компании</a></li>
@@ -84,6 +84,7 @@
                     </div>
                 </div>
             </div>
+            <!--Слайдер-->
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-12">
@@ -116,7 +117,7 @@
                     </div>
                 </div>
             </div>
-
+<!--Приемущества продукта-->
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-lg-4">
@@ -148,7 +149,7 @@
                     </div>
                 </div>
             </div>
-
+<!--продукты-->
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-lg-4 col-xl-4 col-12 pr-lg-0 mb-3">
@@ -249,7 +250,7 @@
                     </div>
                 </div>
             </div>
-
+<!--популярные продукты-->
             <div class="bg-light mb-4">
                 <div class="container py-4">
                     <div class="row">
@@ -308,7 +309,7 @@
                     </div>
                 </div>
             </div>
-
+<!--о компании-->
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-xl-3 col-12 mr-lg-4 d-none d-md-none d-lg-block d-xl-block">
@@ -336,7 +337,7 @@
                     </div>
                 </div>
             </div>
-
+<!--новости-->
             <div class="container mb-5">
                 <div class="row" id="last-news">
                     <div class="col-12 mb-4">
@@ -371,7 +372,7 @@
                 </div>
             </div>
         </main>
-
+<!--футер-->
         <footer class="">
             <div class="container">
                 <div class="row">
@@ -435,11 +436,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <select class="form-control form-control-sm select">
-                        <option value='{"num" :" +7(423) 262-00-96" ,"city" :" Владивосток" }'>Владивосток</option>
-                        <option value='{"num" :" +7(423) 262-00-96" ,"city" :" Хабаровск" }'>Хабаровск</option>
-                        <option value='{"num" :" +7(423) 262-00-96" ,"city" :" Благовещенск" }'>Благовещенск</option>
-                    </select>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Владивосток</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Хабаровск</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Благовещенск</a>
                 </div>
             </div>
         </div>

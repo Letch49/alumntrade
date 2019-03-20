@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html prefix="og: ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание для поисковиков">
+    <meta name="keywords" content="Ключевые слова для поисковиков">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>alumtrade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- Owl Slider -->
+    <link rel="stylesheet" href="static/lib/owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="static/lib/owlcarousel/owl.theme.default.min.css" />
+    <!-- my -->
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 order-sm-1 col-5 order-1 d-none d-md-block d-lg-block d-xl-block">
+                        <a href="/"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-7 col-md-12 order-sm-3 order-lg-2 order-xl-2 col-12 order-3 pr-0">
+                        <div class="stellarnav navmenu d-flex flex-wrap justify-content-around align-items-center">
+                            <div class="col-9 d-block d-md-none d-lg-none d-xl-none order-0">
+                                <a href="/" class="d-flex justify-content-end"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                            </div>
+                            <ul class="d-lg-flex justify-content-between align-items-center">
+                                <li class="nav-first"><a href="#">О компании</a></li>
+                                <li class="drop-right nav-first"><a href="#">Продукция</a>
+                                    <ul class="drop mt-2">
+                                        <li><a href="#">Воротные системы</a></li>
+                                        <li><a href="#">Роллетные системы</a></li>
+                                        <li><a href="#">Автоматика</a>
+                                            <ul>
+                                                <li><a href="#">Гаражные ворота</a>
+                                                    <ul>
+                                                        <li><a href="#">Откатные ворота</a></li>
+                                                        <li><a href="#">Распашные ворота</a></li>
+                                                        <li><a href="#">Секции ограждений</a>
+                                                        <li><a href="#">Калитки</a>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Промышленные ворота</a></li>
+                                                <li><a href="#">Панорманые ворота</a></li>
+                                                <li><a href="#">Выездные ворота</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-first"><a href="#">Где купить</a></li>
+                                <li class="nav-first hover-disable calc-border"><a href="#"> <img src="static/img/calculator.svg" class="mr-2 svg calc-svg">Калькулятор</a></li>
+                                <li class="nav-first"><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 order-sm-2 col-12 order-2 d-flex d-md-block d-lg-block d-xl-block">
+                        <div class="map w-100 text-lg-right text-md-right text-xl-right">
+                            <img src="static/img/maps-and-flags.svg" class="svg">
+                            <a id="city" class="text-muted" href="#" data-toggle="modal" data-target="#cityModal">Владивосток</a>
+                        </div>
+                        <a href="tel:+74232620096" id="tel" class="text-right w-100 d-inline-block text-dark">+7(423) 262-00-96</a>
+                    </div>
+                    <div class="col-12 order-2 my-2 d-md-none">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="w-100 d-flex align-bottom style-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TODO: Разметка для остальных страниц-->
+            <div id="page" class="my-4">
+                <!--Хлебные крошки-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb pl-0">
+                                    <li class="breadcrumb-item font-weight-light text-dark"><a href="/">Главная</a></li>
+                                    <li class="breadcrumb-item font-weight-light text-dark"><a href="#">Где купить</a></li>
+                                    <li class="breadcrumb-item font-weight-light text-muted active" aria-current="page">Роллетные системы</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Конент на странице-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="h3 mb-4 font-weight-bold">Где купить роллетные системы</h1>
+                            <script src="https://api-maps.yandex.ru/2.1/?apikey=93bd6158-1a8d-4ec6-9763-4eaeb09de482&lang=ru_RU" type="text/javascript"></script>
+                            <script type="text/javascript">
+                                ymaps.ready(() => {
+                                    var myMap = new ymaps.Map("map", {
+                                        center: [55.76, 37.64],
+                                        controls: [],
+                                    });
+                                    // Создаём макет содержимого.
+                                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                                        `<div style="color: #FFFFFF; font-weight: bold; display: flex; justify-content: center; width: 25px; height: 25px; display: flex; align-items: center;">$[properties.iconContent]</div>`
+                                    );
+                                    // иконка для картинки
+                                    var icon = "data:img/png;base64,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";
+                                    var setItem = { iconLayout: 'default#imageWithContent', iconImageHref: icon, iconImageSize: [45, 35], iconImageOffset: [-15, -55], iconContentLayout: MyIconContentLayout };
+
+                                    var shopCollect;
+                                    addItemsShops();
+                                    function addItemsShops() {
+                                        /* Точки на карте диллеров */
+                                        var rowItemShops = [
+                                            [[43.148162, 131.932565], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>Днепровская улица, 97БВладивосток, Приморский край, Россия, 690089'],
+                                            [[44.148162, 132.932565], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>Днепровская улица, 97БВладивосток, Приморский край, Россия, 690089'],
+
+                                            [[48.502680, 135.109727], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>улица Карла Маркса, 136А Хабаровск, Россия, 680031'],
+
+                                            [[50.305158, 127.524829], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>улица Воронкова, 8Благовещенск, Амурская область, Россия, 675028'],
+                                        ];
+                                        shopsCollect = new ymaps.GeoObjectCollection({}, { setItem });
+                                        /* Добавляем точки */
+                                        rowItemShops.forEach(function (item, i, arr) {
+                                            shopsCollect.add(new ymaps.Placemark(item[0], { hintContent: item[1], balloonContent: item[2], iconContent: 1, iconContent: i + 1 }, setItem));
+                                        });
+                                        myMap.geoObjects.add(shopsCollect);
+                                        myMap.setCenter(rowItemShops[0][0], 12, []);
+                                        return shopsCollect;
+                                    }
+                                    /* Цепляем события на точки в таблице */
+                                    $('.map-ico').click(function () {
+                                        myMap.setCenter($(this).data('coords').split(','), 12);
+                                    });
+
+                                    /* Цепляем события на выпадающий список */
+                                    $('#map-change').change(function () {
+                                        var coords = $(this).val();
+                                        var city = $(this).find(':selected').text().split(' ').pop().toLocaleLowerCase();
+                                        var arr = coords.split(',');
+                                        myMap.setCenter(arr, 12);
+                                        var table = $('.e_sort-map-table');
+                                        $(table).find('tr').each(function(_, el) {
+                                            var dataCity = String($(el).data('city')).toLocaleLowerCase();
+                                            dataCity != city && _ != 0 ? $(el).fadeOut() : $(el).fadeIn();                                       
+                                        });
+                                    });
+                                });
+                            </script>
+                            <div id="map" class="mb-4 map-container">
+                                <div>
+                                    <select class="form-control-sm" id="map-change">
+                                        <option value="43.148162, 131.932565">г. Владивосток</option>
+                                        <option value="48.502680, 135.109727">г. Хабаровск</option>
+                                        <option value="50.305158, 127.524829">г. Благовещенск</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover e_sort-map-table my-table ">
+                                    <thead>
+                                        <tr class="">
+                                            <th scope="col" class="font-weight-normal p-3">Название компании</th>
+                                            <th scope="col" class="font-weight-normal p-3">Адрес</th>
+                                            <th scope="col" class="font-weight-normal p-3">Направление деятельности</th>
+                                            <th scope="col" class="font-weight-normal p-3">Контакты</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-city="владивосток">
+                                            <th scope="row" class="font-weight-light p-3 align-middle">Виктория, ООО</th>
+                                            <td class="map-table align-middle">
+                                                <div class="map-ico d-flex justify-content-center align-items-center mr-2 float-left" data-coords="43.148162, 131.932565">1</div>
+                                                <span class="font-weight-light float-left">690002, Владивосток, <br> ул. Пр-т Острякова, 8</span>
+                                            </td>
+                                            <td class="font-weight-light p-3 align-middle">Роллетные системы</td>
+                                            <td class="font-weight-normal p-3 align-middle">
+                                                <a href="tel:123" class="text-dark phone-link d-block position-relative font-weight-bold " style="left: -20px">+7(423) 123-43-65</a>
+                                                <a href="mailto:123@ya.ru" class="text-dark  d-block ">123@ya.ru</a>
+                                                <a href="www.123.com" class=" d-block ">www.site.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-city="Хабаровск">
+                                            <th scope="row" class="font-weight-light p-3 align-middle">Виктория, ООО</th>
+                                            <td class="map-table align-middle">
+                                                <div class="map-ico d-flex justify-content-center align-items-center mr-2 float-left" data-coords="48.502680, 135.109727">3</div>
+                                                <span class="font-weight-light float-left">690002, Хабаровск, <br> ул. Пр-т Острякова, 8</span>
+                                            </td>
+                                            <td class="font-weight-light p-3 align-middle">Роллетные системы</td>
+                                            <td class="font-weight-normal p-3 align-middle">
+                                                <a href="tel:123" class="text-dark phone-link d-block position-relative font-weight-bold " style="left: -20px">+7(423) 123-43-65</a>
+                                                <a href="mailto:123@ya.ru" class="text-dark  d-block ">123@ya.ru</a>
+                                                <a href="www.123.com" class=" d-block ">www.site.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-city="Хабаровск">
+                                            <th scope="row" class="font-weight-light p-3 align-middle">Виктория, ООО</th>
+                                            <td class="map-table align-middle">
+                                                <div class="map-ico d-flex justify-content-center align-items-center mr-2 float-left" data-coords="48.502680, 135.109727">3</div>
+                                                <span class="font-weight-light float-left">690002, Хабаровск, <br> ул. Пр-т Острякова, 8</span>
+                                            </td>
+                                            <td class="font-weight-light p-3 align-middle">Роллетные системы</td>
+                                            <td class="font-weight-normal p-3 align-middle">
+                                                <a href="tel:123" class="text-dark phone-link d-block position-relative font-weight-bold " style="left: -20px">+7(423) 123-43-65</a>
+                                                <a href="mailto:123@ya.ru" class="text-dark  d-block ">123@ya.ru</a>
+                                                <a href="www.123.com" class=" d-block ">www.site.com</a>
+                                            </td>
+                                        </tr>
+                                        <tr data-city="Благовещенск">
+                                            <th scope="row" class="font-weight-light p-3 align-middle">Виктория, ООО</th>
+                                            <td class="map-table align-middle">
+                                                <div class="map-ico d-flex justify-content-center align-items-center mr-2 float-left" data-coords="48.502680, 135.109727">3</div>
+                                                <span class="font-weight-light float-left">690002, Хабаровск, <br> ул. Пр-т Острякова, 8</span>
+                                            </td>
+                                            <td class="font-weight-light p-3 align-middle">Роллетные системы</td>
+                                            <td class="font-weight-normal p-3 align-middle">
+                                                <a href="tel:123" class="text-dark phone-link d-block position-relative font-weight-bold " style="left: -20px">+7(423) 123-43-65</a>
+                                                <a href="mailto:123@ya.ru" class="text-dark  d-block ">123@ya.ru</a>
+                                                <a href="www.123.com" class=" d-block ">www.site.com</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--футер-->
+        <footer class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="w-100 d-flex align-bottom style-line mb-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 order-4 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="">Следите за нами в соц. сетях:</li>
+                            <li class="my-3">
+                                <a href="https://facebook.com" class="mr-3 social-icon fb"></a>
+                                <a href="https://vk.com/" class="mr-3 social-icon vk"></a>
+                                <a href="https://instagram.com" class="mr-3 social-icon insta"></a>
+                            </li>
+                            <li class="d-flex flex-column">
+                                <a href="/" class="text-dark text-decoration-none">&#169; 2019, "Алюмтрейд"</a>
+                                <a href="/private">Политика конфиденциальности</a>
+                            </li>
+                            <li class="mb-3 mt-md-3 d-lg-none d-xl-none justify-content-start align-items-center d-flex d-md-none">Разработка сайта - <a href="https://atomagency.ru/" class="ml-sm-3 ml-0"><img src="static/img/atom.svg" alt="atom" class="atom"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 oreder-1 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3"> <a href="#" class="text-dark">Воротные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Роллетные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">автоматика шлагбаумы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Алюминевые профильные системы</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 order-2 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3"> <a href="#" class="text-dark">Перегрузочное оборудование</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">противопожарные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Комплектующие и профили для производства окон ПВХ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 order-3 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Владивосток:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Хабаровск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Благовещенск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mt-md-3 d-lg-flex justify-content-end align-items-center d-none d-md-flex">Разработка сайта - <a href="https://atomagency.ru/" class="ml-sm-3 ml-0"><img src="static/img/atom.svg" alt="atom" class="atom"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h6" id="cityModalLabel">Выберите город</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Владивосток</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Хабаровск</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Благовещенск</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--bootstrap 4-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--owl-->
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <!--stellarnav-->
+    <script src="static/lib/stellarnav/js/stellarnav.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

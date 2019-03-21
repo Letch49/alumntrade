@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
 @import (less)url('../lib/stellarnav/css/stellarnav.min.css');
-@color-salad: #bdcb02;
-@color-orange: #fbb600;
-@color-blue: #67b5dd;
 html,
 body {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -24,6 +21,9 @@ body {
             }
             img {
                 filter: brightness(0) invert(1);
+            }
+            .svg{
+                fill: white!important;
             }
         }
     }
@@ -405,12 +405,14 @@ a#tel {
     }
 }
 
-#popular-slider {
+.product-container {
     @color-salad: #afc435;
     .item {
         // border: 1px solid #e0e0e0;
         img {
             max-height: 8rem;
+            width: 100%;
+            object-fit: cover;
         }
         .transition();
         &:hover {
@@ -506,12 +508,93 @@ footer {
 // Breadcrumb
 .breadcrumb {
     background-color: transparent;
+    font-size: 0.8rem;
     li,
     li a {
         color: inherit;
     }
 }
-
+// PAGE
+// page menu
+.page-menu {
+    @gray: #e0e0e0;
+    @blue: #38b8e1;
+    .menu-item {
+        .primary-link {
+            font-size: .8rem;
+            .transition(); // font-size: 0.8rem;
+            &::before {
+                content: '';
+                display: block;
+                margin-right: .7rem;
+                padding: 3px;
+                background: @gray;
+            }
+            &:hover {
+                color: @color-salad !important;
+                &::before {
+                    background: @color-salad;
+                }
+            }
+        }
+        &.active {
+            .primary-link {
+                color: @color-salad !important;
+                &::before {
+                    background: @color-salad;
+                }
+            }
+        }
+        li a {
+            .transition();
+            text-decoration: none;
+            &:hover {
+                color: @blue !important;
+            }
+        }
+    }
+}
+// products
+#page h1{
+    color: #333;
+}
+#page .product-container {
+    // padding: 0 15px;
+    .item .wrapper {
+        @background: #f9f9f9;
+        background: @background !important;
+        // max-width: 15.5rem;
+        &:hover{
+            background: white!important;
+        }
+    }
+}
+//paginator
+.pagination{
+    .page-item{
+        &:not(.active){
+            border: #e1e1e1;
+        }
+        &.active{
+            border: none;
+            .page-link{
+                background: #38b8e1;
+                border: 1px solid #38b8e1;
+                color: white;
+            }
+        }
+        .page-link{
+            .transition();
+            color: #333333;
+            font-weight: 500;
+            &:hover{
+                background: #38b8e1;
+                border: 1px solid #38b8e1;
+                color: white;
+            }
+        }
+    }
+}
 // gde kupit
 #map-change {
     position: absolute;
@@ -535,11 +618,29 @@ footer {
 }
 
 .my-table {
-    thead tr{
+    thead tr {
         background: #f1f1f1;
     }
     font-size: 0.8rem;
     @media (max-width: 992px) {
         width: 750px;
+    }
+}
+
+//preson
+.team-description{
+    // font-size: .85rem
+}
+.person{
+    h2,p,a{
+        color: #333;
+    }
+    .person-description{
+        .post{
+            font-style: oblique;
+        }
+        .description{
+            font-size: .85rem
+        }
     }
 }

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html prefix="og: ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание для поисковиков">
+    <meta name="keywords" content="Ключевые слова для поисковиков">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>alumtrade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <!-- Owl Slider -->
+    <link rel="stylesheet" href="static/lib/owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="static/lib/owlcarousel/owl.theme.default.min.css" />
+    <!-- my -->
+    <link rel="stylesheet" type="text/css" media="screen" href="static/css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 order-sm-1 col-5 order-1 d-none d-md-block d-lg-block d-xl-block">
+                        <a href="/"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-7 col-md-12 order-sm-3 order-lg-2 order-xl-2 col-12 order-3 pr-0">
+                        <div class="stellarnav navmenu d-flex flex-wrap justify-content-around align-items-center">
+                            <div class="col-9 d-block d-md-none d-lg-none d-xl-none order-0">
+                                <a href="/" class="d-flex justify-content-end"><img src="static/img/alumntrade.svg" alt="Группа компаний..." title="Группа компаний..." class="img-fluid"></a>
+                            </div>
+                            <ul class="d-lg-flex justify-content-between align-items-center">
+                                <li class="nav-first"><a href="#">О компании</a></li>
+                                <li class="drop-right nav-first"><a href="#">Продукция</a>
+                                    <ul class="drop mt-2">
+                                        <li><a href="#">Воротные системы</a></li>
+                                        <li><a href="#">Роллетные системы</a></li>
+                                        <li><a href="#">Автоматика</a>
+                                            <ul>
+                                                <li><a href="#">Гаражные ворота</a>
+                                                    <ul>
+                                                        <li><a href="#">Откатные ворота</a></li>
+                                                        <li><a href="#">Распашные ворота</a></li>
+                                                        <li><a href="#">Секции ограждений</a>
+                                                        <li><a href="#">Калитки</a>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Промышленные ворота</a></li>
+                                                <li><a href="#">Панорманые ворота</a></li>
+                                                <li><a href="#">Выездные ворота</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-first"><a href="#">Где купить</a></li>
+                                <li class="nav-first hover-disable calc-border"><a href="#"> <img src="static/img/calculator.svg" class="mr-2 svg calc-svg">Калькулятор</a></li>
+                                <li class="nav-first"><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 order-sm-2 col-12 order-2 d-flex d-md-block d-lg-block d-xl-block">
+                        <div class="map w-100 text-lg-right text-md-right text-xl-right">
+                            <img src="static/img/maps-and-flags.svg" class="svg">
+                            <a id="city" class="text-muted" href="#" data-toggle="modal" data-target="#cityModal">Владивосток</a>
+                        </div>
+                        <a href="tel:+74232620096" id="tel" class="text-right w-100 d-inline-block text-dark">+7(423) 262-00-96</a>
+                    </div>
+                    <div class="col-12 order-2 my-2 d-md-none">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="w-100 d-flex align-bottom style-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TODO: Разметка для остальных страниц-->
+            <div id="page" class="my-4">
+                <!--Хлебные крошки-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb pl-0">
+                                    <li class="breadcrumb-item font-weight-light text-dark"><a href="/">Главная</a></li>
+                                    <li class="breadcrumb-item font-weight-light text-dark"><a href="#">Каталог</a></li>
+                                    <li class="breadcrumb-item font-weight-light text-muted active" aria-current="page">Воротные системы</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-lg-3 d-lg-block d-none">
+                            <nav class="page-menu sticky-top">
+                                <div class="line mt-2"></div>
+                                <div class="menu-item active my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">воротные системы</a>
+                                    <ul class="list-unstyled ml-4 my-2">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">Промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">Гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">Панорамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">роллетные системы</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">автоматика, шлакбаумы</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">алюминевые профильные системы</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">перегрузочное оборудование</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">противопожарные системы</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">комплектующие и профили для производства окон ПВХ</a>
+                                    <ul class="list-unstyled ml-4 my-2 d-none">
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">гаражные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">промышленные ворота</a></li>
+                                        <li class="mb-1"><a href="#" class="h-100 text-dark font-weight-light">понрамные ворота</a></li>
+                                    </ul>
+                                </div>
+                                <div class="line mt-2"></div>
+                            </nav>
+                        </aside>
+                        <div class="col-lg-9 col-12">
+                            <h1 class="h4 font-weight-black">Промышленные ворота</h1>
+                            <div class="product-container w-100 d-flex flex-wrap justify-content-start">
+                                <div class="item my-3 col-lg-4 col-md-6 col-12">
+                                    <div class="wrapper p-3 w-100">
+                                        <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4">
+                                        <h3 class="h6 text-center font-weight-normal"><a href="#" class="text-dark">Гаражные ворота TREND</a></h3>
+                                        <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
+                                        <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
+                                    </div>
+                                </div>
+
+                                <div class="item my-3 col-lg-4 col-md-6 col-12">
+                                    <div class="wrapper p-3 w-100">
+                                        <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4">
+                                        <h3 class="h6 text-center font-weight-normal"><a href="#" class="text-dark">Гаражные ворота TREND</a></h3>
+                                        <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
+                                        <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
+                                    </div>
+                                </div>
+
+                                <div class="item my-3 col-lg-4 col-md-6 col-12">
+                                    <div class="wrapper p-3 w-100">
+                                        <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4">
+                                        <h3 class="h6 text-center font-weight-normal"><a href="#" class="text-dark">Гаражные ворота TREND</a></h3>
+                                        <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
+                                        <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
+                                    </div>
+                                </div>
+                                <div class="item my-3 col-lg-4 col-md-6 col-12">
+                                    <div class="wrapper p-3 w-100">
+                                        <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4">
+                                        <h3 class="h6 text-center font-weight-normal"><a href="#" class="text-dark">Гаражные ворота TREND</a></h3>
+                                        <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
+                                        <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
+                                    </div>
+                                </div>
+                                <div class="item my-3 col-lg-4 col-md-6 col-12">
+                                    <div class="wrapper p-3 w-100">
+                                        <img src="media/rollet.webp" alt="Гаражные ворота TREND" class="img-fluid mb-4">
+                                        <h3 class="h6 text-center font-weight-normal"><a href="#" class="text-dark">Гаражные ворота TREND</a></h3>
+                                        <span class="price font-weight-bold w-100 text-center d-inline-block h4">от 22 990 P</span>
+                                        <a href="#" class="btn btn-salad font-weight-bold text-white w-100 text-center text-uppercase mt-4 rounded-0 py-2">Подробнее &#xbb;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <nav aria-label="..." class="w-100">
+                                    <ul class="pagination w-100 d-flex justify-content-center">
+                                        <li class="mr-4 page-item rounded-0"><a class="page-link rounded-0" href="#">1</a></li>
+                                        <li class="mr-4 page-item active" aria-current="page">
+                                            <span class="page-link">
+                                                2
+                                                <span class="sr-only">(current)</span>
+                                            </span>
+                                        </li>
+                                        <li class="mr-4 page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="mr-4 page-item "><a class="page-link rounded-0" href="#">4</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--футер-->
+        <footer class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="w-100 d-flex align-bottom style-line mb-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 order-4 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="">Следите за нами в соц. сетях:</li>
+                            <li class="my-3">
+                                <a href="https://facebook.com" class="mr-3 social-icon fb"></a>
+                                <a href="https://vk.com/" class="mr-3 social-icon vk"></a>
+                                <a href="https://instagram.com" class="mr-3 social-icon insta"></a>
+                            </li>
+                            <li class="d-flex flex-column">
+                                <a href="/" class="text-dark text-decoration-none">&#169; 2019, "Алюмтрейд"</a>
+                                <a href="/private">Политика конфиденциальности</a>
+                            </li>
+                            <li class="mb-3 mt-md-3 d-lg-none d-xl-none justify-content-start align-items-center d-flex d-md-none">Разработка сайта - <a href="https://atomagency.ru/" class="ml-sm-3 ml-0"><img src="static/img/atom.svg" alt="atom" class="atom"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 oreder-1 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3"> <a href="#" class="text-dark">Воротные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Роллетные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">автоматика шлагбаумы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Алюминевые профильные системы</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 order-2 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3"> <a href="#" class="text-dark">Перегрузочное оборудование</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">противопожарные системы</a></li>
+                            <li class="mb-3"> <a href="#" class="text-dark">Комплектующие и профили для производства окон ПВХ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 order-3 order-md-1 order-lg-1 order-xl-1">
+                        <ul class="list-unstyled font-weight-light">
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Владивосток:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Хабаровск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mb-md-1 d-lg-flex justify-content-end align-items-center"> <span class="mr-2">Благовещенск:</span> <a href="tel:asdasdasd" class="text-dark font-weight-normal phone-link">+7 (423) 262-00-96</a></li>
+                            <li class="mb-3 mt-md-3 d-lg-flex justify-content-end align-items-center d-none d-md-flex">Разработка сайта - <a href="https://atomagency.ru/" class="ml-sm-3 ml-0"><img src="static/img/atom.svg" alt="atom" class="atom"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h6" id="cityModalLabel">Выберите город</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Владивосток</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Хабаровск</a>
+                    <a href="#" data-value='+7(423) 262-00-96' class="text-dark d-block city mb-1">Благовещенск</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--bootstrap 4-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--owl-->
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <!--stellarnav-->
+    <script src="static/lib/stellarnav/js/stellarnav.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

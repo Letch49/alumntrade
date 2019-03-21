@@ -1,8 +1,9 @@
+@color-salad: #bdcb02;
+@color-orange: #fbb600;
+@color-blue: #67b5dd;
 .transition(@sec: 200ms) {
     transition: all @sec ease-in-out;
 }
-
-.to_rem(@px) {}
 
 .opacity-invis {
     .transition();
@@ -17,10 +18,13 @@
 .font-weight-medium {
     font-weight: 500;
 }
+.font-weight-black{
+    font-weight: 900;
+}
 
 .line {
     background: #e8e8e8;
-    height: 1px;
+    height: .05rem;
 }
 
 .social-icon img {
@@ -57,4 +61,30 @@
     color: white;
     cursor: pointer;
     background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAhCAMAAAD03JuvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABNVBMVEXkIVn////kI1rkJVzlJ17lKmDlLWLlMGTqXITqYIfrZIrraI3rbJDscZPsdJbseJntfJztf57ug6HuhqPuiaXujKfvjqnvkKvkIVnkIVnkIVnkIVnkI1rkI1rkJVzkJVzlJ17lKmDlLWLlLWLlMGTmNGfmN2nnO2znP2/oR3XoS3joT3vpU37pV4HqXITqYIfrZIrrZIrraI3rbJDrbJDscZPsdJbseJnseJntfJztf57ug6Hug6HuhqPuhqPuiaXujKfujKfvjqnvjqnvkKvvkKvkIVnkI1rkJVzlJ17lKmDlLWLlMGTmNGfmN2nnO2znP2/nQnLoR3XoS3joT3vpU37pV4HqXITqYIfrZIrraI3rbJDscZPsdJbseJntfJztf57ug6HuhqPuiaXujKfvjqkAAACipW6fAAAARnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApgsPvKLNp+YVpKfm3KoXG8P3nt3goymIG4mwF20qrGvJlrxTmQf12AaoKyxnZWokuLQAAAAFiS0dEZizU2SUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxQJESpDbKjdAAABCklEQVQoz3XS1XqDQBSF0TMtqSXUG+Lu7u5Wd3fN+79Chxngo3C6bv/LvQE4h9Plns3cLqeDcLAg83j3NV4PD4uUz3+g4/exIAhC4NAgIAeLJXhkEqRhKRQ+NgmHCCxHThARAtFTVBRiZ6gYxM9RcUhcoBJw+Q9IXqGSkLpGpSB9g0pD5haVgewdKgsruXtEjsBq/gGRJ7BWKD6aFAsErNbSk0mJ7mGzlSvPBpUyDaIoVl8MqvK061Tt9Y8aO8MGVW+86TTqLGzKmu86Tf6rLab1oWkpT9xm2p1PRaethB2u2/tiel31u7uK/jfTJ2rYUwyGP9RwoAW7ajSez8cjuxYkzWQ6nUiSGn4BmQi60Oz2UmkAAAAASUVORK5CYII=");
+}
+
+.text-salad{
+    color: @color-salad;
+}
+.bg-salad{
+    background: @color-salad;
+}
+.text-orange{
+    color: #f47f22;
+}
+.mail-icon{
+    background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAQAAACI04Q8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxQWLxY6vCtqAAABAklEQVQoz3XRLUuDARTF8d8zJ2JQk2l2cUFMwhBMThlb0fAgzi5qEsGoaHT4ARYEgzMsGAYWXRrowGCRB/PAfQA1iPga5lRkO/GeP4d7zw0iNi3p0VnvTpIHQbThWEm6C3Qhb7lnvW5C3rCJDsiRVSVrcaRV5TTs/EN2HaoaJw7G1WU1FPV+A69W3KhLQOx7mFDTlPMIHuU01VpIOwkGbZk17QxZt84Ntq3YDxQJVcxLSZlXEYraVjvpXkZBVtYoFlGQcWUEgugTD6aEtv9dt6fs0lALepE2ptihpxV3LvQF0bvQm9M/2/3qw4K4chDNeVLV3+Utz2YMBBH7JnXXdXLrC2XvQo0z8nUTAAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px 15px;
+    min-width: 20px;
+}
+.phone-icon{
+    background-image: url(../img/phone-receiver.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px 15px;
+    filter: invert(50%);
+    opacity: .5;
+    min-width: 20px;
 }

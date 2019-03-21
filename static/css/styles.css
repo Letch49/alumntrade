@@ -41,6 +41,21 @@
 .top-5px {
   top: 5px;
 }
+.text-salad {
+  color: #bdcb02;
+}
+.text-gray {
+  color: #333;
+}
+.text-gray:hover {
+  color: #333;
+}
+.bg-salad {
+  background: #bdcb02;
+}
+.text-orange {
+  color: #f47f22;
+}
 .map-ico {
   background-size: 16px 20px;
   background-repeat: no-repeat;
@@ -51,15 +66,6 @@
   color: white;
   cursor: pointer;
   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAhCAMAAAD03JuvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABNVBMVEXkIVn////kI1rkJVzlJ17lKmDlLWLlMGTqXITqYIfrZIrraI3rbJDscZPsdJbseJntfJztf57ug6HuhqPuiaXujKfvjqnvkKvkIVnkIVnkIVnkIVnkI1rkI1rkJVzkJVzlJ17lKmDlLWLlLWLlMGTmNGfmN2nnO2znP2/oR3XoS3joT3vpU37pV4HqXITqYIfrZIrrZIrraI3rbJDrbJDscZPsdJbseJnseJntfJztf57ug6Hug6HuhqPuhqPuiaXujKfujKfvjqnvjqnvkKvvkKvkIVnkI1rkJVzlJ17lKmDlLWLlMGTmNGfmN2nnO2znP2/nQnLoR3XoS3joT3vpU37pV4HqXITqYIfrZIrraI3rbJDscZPsdJbseJntfJztf57ug6HuhqPuiaXujKfvjqkAAACipW6fAAAARnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApgsPvKLNp+YVpKfm3KoXG8P3nt3goymIG4mwF20qrGvJlrxTmQf12AaoKyxnZWokuLQAAAAFiS0dEZizU2SUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxQJESpDbKjdAAABCklEQVQoz3XS1XqDQBSF0TMtqSXUG+Lu7u5Wd3fN+79Chxngo3C6bv/LvQE4h9Plns3cLqeDcLAg83j3NV4PD4uUz3+g4/exIAhC4NAgIAeLJXhkEqRhKRQ+NgmHCCxHThARAtFTVBRiZ6gYxM9RcUhcoBJw+Q9IXqGSkLpGpSB9g0pD5haVgewdKgsruXtEjsBq/gGRJ7BWKD6aFAsErNbSk0mJ7mGzlSvPBpUyDaIoVl8MqvK061Tt9Y8aO8MGVW+86TTqLGzKmu86Tf6rLab1oWkpT9xm2p1PRaethB2u2/tiel31u7uK/jfTJ2rYUwyGP9RwoAW7ajSez8cjuxYkzWQ6nUiSGn4BmQi60Oz2UmkAAAAASUVORK5CYII=");
-}
-.text-salad {
-  color: #bdcb02;
-}
-.bg-salad {
-  background: #bdcb02;
-}
-.text-orange {
-  color: #f47f22;
 }
 .mail-icon {
   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAQAAACI04Q8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxQWLxY6vCtqAAABAklEQVQoz3XRLUuDARTF8d8zJ2JQk2l2cUFMwhBMThlb0fAgzi5qEsGoaHT4ARYEgzMsGAYWXRrowGCRB/PAfQA1iPga5lRkO/GeP4d7zw0iNi3p0VnvTpIHQbThWEm6C3Qhb7lnvW5C3rCJDsiRVSVrcaRV5TTs/EN2HaoaJw7G1WU1FPV+A69W3KhLQOx7mFDTlPMIHuU01VpIOwkGbZk17QxZt84Ntq3YDxQJVcxLSZlXEYraVjvpXkZBVtYoFlGQcWUEgugTD6aEtv9dt6fs0lALepE2ptihpxV3LvQF0bvQm9M/2/3qw4K4chDNeVLV3+Utz2YMBBH7JnXXdXLrC2XvQo0z8nUTAAAAAElFTkSuQmCC");
@@ -625,7 +631,7 @@ body {
             filter: brightness(0) invert(1);
   }
   .navmenu .calc-border:hover .svg {
-    fill: white!important;
+    fill: white !important;
   }
 }
 .navmenu li:not(.calc-border).nav-first {
@@ -1112,7 +1118,7 @@ footer .atom {
   background: #f9f9f9 !important;
 }
 #page .product-container .item .wrapper:hover {
-  background: white!important;
+  background: white !important;
 }
 .pagination .page-item:not(.active) {
   border: #e1e1e1;
@@ -1138,16 +1144,16 @@ footer .atom {
 #map-change {
   position: absolute;
   z-index: 100;
-  top: 4.7rem;
+  top: 1rem;
   left: 2rem;
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 0;
   width: 220px;
 }
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   #map-change {
-    top: 6.5rem;
+    left: 1rem;
   }
 }
 .map-container {
@@ -1169,6 +1175,9 @@ footer .atom {
     width: 750px;
   }
 }
+.my-table tbody .phone-link {
+  left: -20px;
+}
 .person h2,
 .person p,
 .person a {
@@ -1179,5 +1188,49 @@ footer .atom {
 }
 .person .person-description .description {
   font-size: 0.85rem;
+}
+.btn-change-state {
+  font-size: .8rem;
+  width: 8rem;
+  transition: all 200ms ease-in-out;
+}
+@media (max-width: 768px) {
+  .btn-change-state {
+    width: 7.3rem;
+    font-size: .7rem;
+  }
+}
+@media (max-width: 576px) {
+  .btn-change-state {
+    width: 6.7rem;
+    font-size: .65rem;
+  }
+}
+.btn-change-state:hover:not(.active) {
+  background: #c6d502;
+  color: white;
+  border: 1px solid #bdcb02 !important;
+}
+.btn-group-contact .active {
+  background: #bdcb02 !important;
+  color: white !important;
+  border: 1px solid #bdcb02 !important;
+  box-shadow: none;
+}
+.btn-group-contact .active:hover {
+  color: white;
+}
+.figure-container figure {
+  width: 30px;
+  height: 30px;
+}
+.figure-container figure div {
+  width: 30px;
+  height: 20px;
+  bottom: -5px;
+  opacity: .2;
+}
+.figure-container div p {
+  line-height: 1.3;
 }
 /*# sourceMappingURL=./styles.css.map */

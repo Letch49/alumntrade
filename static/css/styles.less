@@ -12,7 +12,7 @@ body {
 }
 
 .navmenu {
-    font-size: 0.9rem; // .transition();
+    font-size: 0.9rem;
     @media (min-width: 768px) {
         .calc-border:hover {
             background: @color-salad;
@@ -22,14 +22,14 @@ body {
             img {
                 filter: brightness(0) invert(1);
             }
-            .svg{
-                fill: white!important;
+            .svg {
+                fill: white !important;
             }
         }
     }
     li:not(.calc-border) {
         &.nav-first {
-            padding: 5px 10px; // .transition();
+            padding: 5px 10px;
             &:hover {
                 background: @color-blue;
                 &>a {
@@ -514,6 +514,7 @@ footer {
         color: inherit;
     }
 }
+
 // PAGE
 // page menu
 .page-menu {
@@ -531,7 +532,7 @@ footer {
                 background: @gray;
             }
             &:hover {
-                color: @color-salad !important;
+                color: @color-salad  !important;
                 &::before {
                     background: @color-salad;
                 }
@@ -539,7 +540,7 @@ footer {
         }
         &.active {
             .primary-link {
-                color: @color-salad !important;
+                color: @color-salad  !important;
                 &::before {
                     background: @color-salad;
                 }
@@ -549,45 +550,47 @@ footer {
             .transition();
             text-decoration: none;
             &:hover {
-                color: @blue !important;
+                color: @blue  !important;
             }
         }
     }
 }
+
 // products
-#page h1{
+#page h1 {
     color: #333;
 }
+
 #page .product-container {
     // padding: 0 15px;
     .item .wrapper {
         @background: #f9f9f9;
-        background: @background !important;
-        // max-width: 15.5rem;
-        &:hover{
-            background: white!important;
+        background: @background  !important; // max-width: 15.5rem;
+        &:hover {
+            background: white !important;
         }
     }
 }
+
 //paginator
-.pagination{
-    .page-item{
-        &:not(.active){
+.pagination {
+    .page-item {
+        &:not(.active) {
             border: #e1e1e1;
         }
-        &.active{
+        &.active {
             border: none;
-            .page-link{
+            .page-link {
                 background: #38b8e1;
                 border: 1px solid #38b8e1;
                 color: white;
             }
         }
-        .page-link{
+        .page-link {
             .transition();
             color: #333333;
             font-weight: 500;
-            &:hover{
+            &:hover {
                 background: #38b8e1;
                 border: 1px solid #38b8e1;
                 color: white;
@@ -595,18 +598,19 @@ footer {
         }
     }
 }
-// gde kupit
+
+// где купить
 #map-change {
     position: absolute;
     z-index: 100;
-    top: 4.7rem;
+    top: 1rem;
     left: 2rem;
     box-shadow: 7px 7px 10px rgba(0, 0, 0, .1);
     border: none;
     border-radius: 0;
     width: 220px;
-    @media (max-width: 470px) {
-        top: 6.5rem;
+    @media (max-width: 768px) {
+        left: 1rem;
     }
 }
 
@@ -625,22 +629,76 @@ footer {
     @media (max-width: 992px) {
         width: 750px;
     }
+    tbody .phone-link {
+        left: -20px
+    }
 }
 
 //preson
-.team-description{
+.team-description {
     // font-size: .85rem
 }
-.person{
-    h2,p,a{
+
+.person {
+    h2,
+    p,
+    a {
         color: #333;
     }
-    .person-description{
-        .post{
+    .person-description {
+        .post {
             font-style: oblique;
         }
-        .description{
+        .description {
             font-size: .85rem
         }
+    }
+}
+
+// contacs
+.btn-change-state {
+    font-size: .8rem;
+    width: 8rem;
+    @media (max-width: 768px) {
+        width: 7.3rem;
+        font-size: .7rem;
+    }
+    @media (max-width: 576px) {
+        width: 6.7rem;
+        font-size: .65rem;
+    }
+    .transition();
+    &:hover:not(.active) {
+        background: lighten(@color-salad, 2%);
+        color: white;
+        border: 1px solid @color-salad  !important;
+    }
+}
+
+.btn-group-contact {
+    .active {
+        .bg-salad !important;
+        color: white !important;
+        &:hover {
+            color: white;
+        }
+        border: 1px solid @color-salad  !important;
+        box-shadow: none;
+    }
+}
+
+.figure-container {
+    figure {
+        width: 30px;
+        height: 30px;
+        div {
+            width: 30px;
+            height: 20px;
+            bottom: -5px;
+            opacity: .2;
+        }
+    }
+    div p {
+        line-height: 1.3
     }
 }

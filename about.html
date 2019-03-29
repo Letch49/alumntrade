@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
     <!-- Owl Slider -->
     <link rel="stylesheet" href="static/lib/owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="static/lib/owlcarousel/owl.theme.default.min.css" />
@@ -93,131 +94,104 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb pl-0">
                                     <li class="breadcrumb-item font-weight-light text-dark"><a href="/">Главная</a></li>
-                                    <li class="breadcrumb-item font-weight-light text-muted active" aria-current="page">Контакты</li>
+                                    <li class="breadcrumb-item font-weight-light text-muted active" aria-current="page">О компании</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
 
-                <!--Конент на странице-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <h1 class="h5 mb-4 font-weight-black">Контакты</h1>
-                            <section class="mb-4">
-                                <div class="btn-group btn-group-contact" role="group" aria-label="...">
-                                    <button type="button" class="e_btn-change btn btn-change-state text-gray border rounded-0 mr-1 active" data-address="69902, г. Владивосток, ул. Днепровская, д. 99" data-phones="+7(423) 262-00-96, +7(423) 262-00-97" data-mail="vladivostok@alutech.ru," data-coords="43.148162, 131.932565">г. Владивосток</button>
-                                    <button type="button" class="e_btn-change btn btn-change-state text-gray border rounded-0 mr-1" data-address="69902, г. Хабаровск, ул. Днепровская, д. 99" data-phones="+7(413) 262-00-96, +7(423) 262-00-96" data-mail="khb@alutech.ru," data-coords="48.502680, 135.109727">г. Хабаровск</button>
-                                    <button type="button" class="e_btn-change btn btn-change-state text-gray border rounded-0 mr-1" data-address="69902, г. Благовещенск, ул. Днепровская, д. 99" data-phones="+7(4132) 727-03-09, +7(4132) 727-03-08" data-mail="vladivostok@alutech.ru," data-coords="50.305158, 127.524829">г. Благовещенск</button>
+                        <aside class="col-lg-3 d-lg-block d-none">
+                            <nav class="page-menu sticky-top">
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3 active">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">о компании</a>
                                 </div>
-                            </section>
-
-                            <div class="row my-5">
-                                <div class="col-lg-4">
-                                    <section class="d-flex jusitfy-content-between align-items-flex-start figure-container">
-                                        <figure class="position-relative d-flex justify-content-center">
-                                            <img src="static/img/contact-pic.png" alt="">
-                                            <div class="bg-secondary position-absolute"></div>
-                                        </figure>
-                                        <div class="mt-3 ml-3" id="address">
-                                            <h2 class="h6 font-weight-bold">Адрес:</h2>
-                                            <p class="font-weight-light">69902, г. Владивосток, ул. Днепровская, д. 99</p>
-                                        </div>
-                                    </section>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">новости</a>
                                 </div>
-                                <div class="col-lg-4">
-                                    <section class="d-flex jusitfy-content-between align-items-flex-start figure-container">
-                                        <figure class="position-relative d-flex justify-content-center">
-                                            <img src="static/img/contact-tel.png" alt="">
-                                            <div class="bg-secondary position-absolute"></div>
-                                        </figure>
-                                        <div class="mt-3 ml-3" id="phones">
-                                            <h2 class="h6 font-weight-bold">Телефоны:</h2>
-                                            <p class="font-weight-light">
-                                                <a href="tel:+7(423) 262-00-96" class="d-block text-gray">+7(423) 262-00-96</a>
-                                                <a href="tel:+7(423) 262-00-97" class="d-block text-gray">+7(423) 262-00-97</a>
-                                            </p>
-                                        </div>
-                                    </section>
+                                <div class="line mt-2"></div>
+                                <div class="menu-item my-3">
+                                    <a href="#" class="text-uppercase text-dark font-weight-bold primary-link d-flex align-items-center">команда</a>
                                 </div>
-
-                                <div class="col-lg-4">
-                                    <section class="d-flex jusitfy-content-between align-items-flex-start figure-container">
-                                        <figure class="position-relative d-flex justify-content-center" >
-                                            <img src="static/img/contact-mail.png" alt="">
-                                            <div class="bg-secondary position-absolute"></div>
-                                        </figure>
-                                        <div class="mt-3 ml-3" id="mails">
-                                            <h2 class="h6 font-weight-bold">Эл. почта:</h2>
-                                            <p class="w-75 font-weight-light">
-                                                <a href="mailto:vladivostok@alutech.ru" class="d-block text-gray">vladivostok@alutech.ru</a>
-                                            </p>
-                                        </div>
-                                    </section>
-                                </div>
+                                <div class="line mt-2"></div>
+                            </nav>
+                        </aside>
+                        <div class="col-lg-9 col-12">
+                            <h1 class="h5 font-weight-black">О компании</h1>
+                            <div class="description my-4 font-weight-light">
+                                Компания "Алюмтрейд" - это группа компаний, расположенных в городах Хабаровск и Владивосток. На сегодняшний день штат компании составляет более 30 человек, складские площади - более 1500 кв.м. Ассортимент предлагаемых товаров непрерывно увеличивается и вместе с тем сохраняется высочайший уровень качества всех товарных групп. Не смотря на непрерывный рост компании, мы прилагаем все усилия для сохранения качественного и профессионального обслуживания для каждого
+                                клиента.
                             </div>
-                            <script src="https://api-maps.yandex.ru/2.1/?apikey=93bd6158-1a8d-4ec6-9763-4eaeb09de482&lang=ru_RU" type="text/javascript"></script>
-                            <script type="text/javascript">
-                                ymaps.ready(() => {
-                                    var myMap = new ymaps.Map("map", {
-                                        center: [55.76, 37.64],
-                                        controls: [],
-                                    });
-                                    // Создаём макет содержимого.
-                                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                                        `<div style="color: #FFFFFF; font-weight: bold; display: flex; justify-content: center; width: 25px; height: 25px; display: flex; align-items: center;">$[properties.iconContent]</div>`
-                                    );
-                                    // иконка для картинки
-                                    var icon = "data:img/png;base64,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";
-                                    var setItem = { iconLayout: 'default#imageWithContent', iconImageHref: icon, iconImageSize: [45, 35], iconImageOffset: [-15, -55], iconContentLayout: MyIconContentLayout };
-
-                                    var shopCollect;
-                                    addItemsShops();
-                                    function addItemsShops() {
-                                        /* Точки на карте диллеров */
-                                        var rowItemShops = [
-                                            [[43.148162, 131.932565], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>Днепровская улица, 97БВладивосток, Приморский край, Россия, 690089'],
-
-                                            [[48.502680, 135.109727], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>улица Карла Маркса, 136А Хабаровск, Россия, 680031'],
-
-                                            [[50.305158, 127.524829], '<strong>Алютех</strong>', '<strong>Алютех</strong> <br/>улица Воронкова, 8Благовещенск, Амурская область, Россия, 675028'],
-                                        ];
-                                        shopsCollect = new ymaps.GeoObjectCollection({}, { setItem });
-                                        /* Добавляем точки */
-                                        rowItemShops.forEach(function (item, i, arr) {
-                                            shopsCollect.add(new ymaps.Placemark(item[0], { hintContent: item[1], balloonContent: item[2], iconContent: 1, iconContent: String.fromCharCode(1040 + i) }, setItem));
-                                        });
-                                        myMap.geoObjects.add(shopsCollect);
-                                        myMap.setCenter(rowItemShops[0][0], 12, []);
-                                        return shopsCollect;
-                                    }
-                                    /* Цепляем события на группы кнопок по городам */
-                                    function getLinksByCity(el,array,tag) {
-                                        return array.map(function(val, idx) {
-                                            return el.find('a:first').clone().attr('href', tag + ':' + val).text(val);
-                                        });
-                                    }
-                                    function setItemsByCity(el,tag, arr) {
-                                        el.find(tag).html(arr);
-                                    }
-                                    $('.e_btn-change').click(function (e) {
-                                        $('.btn-group-contact button').not(this).removeClass('active')
-                                        myMap.setCenter($(this).data('coords').split(','), 12);
-                                        $(this).toggleClass('active');
-                                        var phones = $('#phones');
-                                        var mails = $('#mails');
-                                        $('#address').find('p').text($(this).data('address'));
-                                        var phonesArray = $(this).data('phones').split(',');
-                                        var mailsArray = $(this).data('mail').split(',');
-                                        setItemsByCity(phones, 'p', getLinksByCity(phones,phonesArray, 'tel'));
-                                        setItemsByCity(mails, 'p', getLinksByCity(mails,mailsArray, 'mailto'));                                      
-                                    });
-
-                                    /* Цепляем события на выпадающий список */
-                                });
-                            </script>
-                            <div id="map" class="mb-5 map-container position-relative">
+                            <div class="row example-centered mt-5">
+                                <div class="col-12">
+                                    <ul class="timeline timeline-centered">
+                                        <li class="timeline-item">
+                                            <div class="timeline-marker none"></div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <span class="font-weight-black">2008 г.</span>
+                                            </div>
+                                            <div class="timeline-marker">
+                                                <div class="salad"></div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <span class="timeline-title font-weight-light h6">Основание компании</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <span class="font-weight-black">2009 г.</span>
+                                            </div>
+                                            <div class="timeline-marker">
+                                                <div class="orange"></div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <span class="timeline-title font-weight-light h6">Расширение ассортимента товаров. Компания начала активное продвижение воротных систем, систем автоматики и алюминиевых профильных систем</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <span class="font-weight-black">2010 г.</span>
+                                            </div>
+                                            <div class="timeline-marker">
+                                                <div class="blue"></div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <span class="timeline-title font-weight-light h6">География продаж распространяется на весь Дальневосточный регион</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <span class="font-weight-black">2011 г.</span>
+                                            </div>
+                                            <div class="timeline-marker">
+                                                <div class="pink"></div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <span class="timeline-title font-weight-light h6">Компания осваивает новое направление в торговле - продажа мебельной фурнитуры австрийского концерна «BLUM» и комплектующих для производства мебели от лидирующих европейских производителей</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <span class="font-weight-black">2013 г.</span>
+                                            </div>
+                                            <div class="timeline-marker">
+                                                <div class="yellow"></div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <span class="timeline-title font-weight-light h6">Открытие филиала в г. Красноярск</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-marker none"></div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

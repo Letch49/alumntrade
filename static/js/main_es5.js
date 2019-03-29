@@ -1,17 +1,19 @@
-$(document).ready(() => {
+'use strict';
+
+$(document).ready(function () {
     // SVG raplce
-    $('img.svg').each((idx, el) => {
-        const $img = $(el);
-        const imgClass = $img.attr('class');
-        const imgUri = $img.attr('src');
+    $('img.svg').each(function (idx, el) {
+        var $img = $(el);
+        var imgClass = $img.attr('class');
+        var imgUri = $img.attr('src');
         $.ajax({
             type: "get",
             url: imgUri,
             data: "data",
             crossDomian: true,
             dataType: "xml",
-            success: (response) => {
-                let $svg = $(response).find('svg');
+            success: function success(response) {
+                var $svg = $(response).find('svg');
                 $svg = $svg.attr('class', imgClass + ' replaced-svg');
                 $svg = $svg.removeAttr('xmlns:a');
                 $img.replaceWith($svg);
@@ -21,11 +23,11 @@ $(document).ready(() => {
     // slider
     $('#slider').owlCarousel({
         singleItem: true,
-        items: 1,
+        items: 1
     });
 
     // slider popular
-    const popularSlider = $('#popular-slider');
+    var popularSlider = $('#popular-slider');
     popularSlider.owlCarousel({
         loop: true,
         margin: 10,
@@ -33,34 +35,34 @@ $(document).ready(() => {
         dots: false,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             600: {
-                items: 2,
+                items: 2
             },
             1000: {
                 items: 4,
-                loop: false,
+                loop: false
             }
         }
     });
-    $('.pop-next').click(() => {
-        popularSlider.trigger('next.owl.carousel')
+    $('.pop-next').click(function () {
+        popularSlider.trigger('next.owl.carousel');
     });
-    $('.pop-prev').click(() => {
+    $('.pop-prev').click(function () {
         popularSlider.trigger('prev.owl.carousel');
     });
     //product item hover
     $('.product-item').hover(function () {
-        const productHover = $(this).find('.product-hover');
+        var productHover = $(this).find('.product-hover');
         productHover.animate({ 'opacity': 1 }, 200);
         productHover.removeClass('invisible');
-        $(this).find('.text-container').animate({ 'opacity': 0 }, 200)
+        $(this).find('.text-container').animate({ 'opacity': 0 }, 200);
     }, function () {
-        const productHover = $(this).find('.product-hover');
+        var productHover = $(this).find('.product-hover');
         productHover.animate({ 'opacity': 0 }, 200);
         productHover.addClass('invisible');
-        $(this).find('.text-container').animate({ 'opacity': 1 }, 200)
+        $(this).find('.text-container').animate({ 'opacity': 1 }, 200);
     });
     //navigation
     $(document).ready(function ($) {
@@ -81,14 +83,14 @@ $(document).ready(() => {
         });
     });
     // change city and phone in header
-    $('#cityModal').find('a.city').click(el => {
+    $('#cityModal').find('a.city').click(function (el) {
         el.preventDefault();
-        const tel = $(el.target).data('value');
-        const city = $(el.target).text();
+        var tel = $(el.target).data('value');
+        var city = $(el.target).text();
         document.querySelector('#city').innerHTML = city;
         document.querySelector('#tel').innerHTML = tel;
         $('#cityModal').modal('hide');
-        const dataLocalStorage = JSON.stringify({
+        var dataLocalStorage = JSON.stringify({
             "city": city,
             "num": tel
         });
@@ -101,7 +103,7 @@ $(document).ready(() => {
     }
 
     // slider in item page
-    const workSlider = $('#work-slider');
+    var workSlider = $('#work-slider');
     workSlider.owlCarousel({
         loop: true,
         margin: 10,
@@ -109,25 +111,25 @@ $(document).ready(() => {
         dots: false,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             600: {
-                items: 1,
+                items: 1
             },
             1000: {
                 items: 1,
-                loop: false,
+                loop: false
             }
         }
     });
-    $('.work-next').click(() => {
-        workSlider.trigger('next.owl.carousel')
+    $('.work-next').click(function () {
+        workSlider.trigger('next.owl.carousel');
     });
-    $('.work-prev').click(() => {
+    $('.work-prev').click(function () {
         workSlider.trigger('prev.owl.carousel');
     });
 
-    const productGallery = $('#product-gallery');
+    var productGallery = $('#product-gallery');
     productGallery.owlCarousel({
         loop: true,
         margin: 20,
@@ -135,21 +137,21 @@ $(document).ready(() => {
         dots: false,
         responsive: {
             0: {
-                items: 2,
+                items: 2
             },
             600: {
-                items: 3,
+                items: 3
             },
             1000: {
                 items: 4,
-                loop: false,
+                loop: false
             }
         }
     });
-    $('.gallery-next').click(() => {
-        productGallery.trigger('next.owl.carousel')
+    $('.gallery-next').click(function () {
+        productGallery.trigger('next.owl.carousel');
     });
-    $('.gallery-prev').click(() => {
+    $('.gallery-prev').click(function () {
         productGallery.trigger('prev.owl.carousel');
     });
 });

@@ -84,6 +84,9 @@
   opacity: .5;
   min-width: 20px;
 }
+.checked-style {
+  list-style-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAMAAACKnBfWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjVBMVEX///+9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywK9ywIAAABOLlobAAAALXRSTlMANqgRLesk5PY9HNz6SiUBFdP9V4wPyWWccgq+dMddBrKEFNjClB6j8bEDPp/kDt5VAAAAAWJLR0QuVNMQhwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MDFgYSK74TRD4AAABtSURBVAjXTY7ZDoJAFEMHRBFEQUBAXAZFZT3//3syxOX2pT1J01QpIcteSHSW2AJXLmvvj/6GYDv5Lpwx2hMnkydxavCQQW5CAUelyhOc5155gauu4PbZudcED3j+hl8u0ITiR0vXy2PDqL/xDW9mCBaqtd7EAAAAAElFTkSuQmCC");
+}
 .stellarnav,
 .stellarnav li {
   position: relative;
@@ -605,6 +608,222 @@ body.stellarnav-noscroll-x {
     display: none;
   }
 }
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url(../img/timeline-bg.png) 50% 0 no-repeat;
+  background-size: 150% 110%;
+}
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+  font-size: 30px;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .timeline-info {
+    margin-bottom: .5rem;
+  }
+}
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.timeline-marker div {
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  border-radius: 50%;
+  position: absolute;
+}
+.timeline-marker div.salad {
+  background-color: #bdcb02;
+}
+.timeline-marker div.blue {
+  background-color: #a5dcf0;
+}
+.timeline-marker div.orange {
+  background-color: #fdb51c;
+}
+.timeline-marker div.yellow {
+  background-color: #ffd988;
+}
+.timeline-marker div.pink {
+  background-color: #d190ae;
+}
+.timeline-marker.none::before {
+  border: none !important;
+}
+.timeline-marker.none::after {
+  top: 0 !important;
+}
+.timeline-marker:before {
+  /* background: #FF6B6B; */
+  border: 1px solid #e1e1e1;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 24px;
+  position: absolute;
+  /* top: 4px; */
+  /* left: 0; */
+  width: 24px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  z-index: 20;
+  /* overflow: hidden; */
+}
+.timeline-marker:after {
+  content: "";
+  width: 1px;
+  background: #e1e1e1;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  /* left: 11px; */
+  /* overflow: hidden; */
+}
+.timeline-item:last-child .timeline-marker:after {
+  content: none;
+}
+.timeline-item:not(.period):hover .timeline-marker:before {
+  background: transparent;
+  border: 1px solid #e1e1e1;
+}
+/*----- TIMELINE CONTENT -----*/
+.timeline-content {
+  padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+/*----------------------------------------------
+    MOD: TIMELINE SPLIT
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .timeline-split .timeline,
+  .timeline-centered .timeline {
+    display: table;
+  }
+  .timeline-split .timeline-item,
+  .timeline-centered .timeline-item {
+    display: table-row;
+    padding: 0;
+  }
+  .timeline-split .timeline-info,
+  .timeline-centered .timeline-info,
+  .timeline-split .timeline-marker,
+  .timeline-centered .timeline-marker,
+  .timeline-split .timeline-content,
+  .timeline-centered .timeline-content,
+  .timeline-split .period .timeline-info,
+  .timeline-centered .period .timeline-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .timeline-split .timeline-marker,
+  .timeline-centered .timeline-marker {
+    position: relative;
+  }
+  .timeline-split .timeline-content,
+  .timeline-centered .timeline-content {
+    padding-left: 30px;
+  }
+  .timeline-split .timeline-info,
+  .timeline-centered .timeline-info {
+    padding-right: 30px;
+  }
+  .timeline-split .period .timeline-title,
+  .timeline-centered .period .timeline-title {
+    position: relative;
+    left: -45px;
+  }
+}
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+@media (min-width: 992px) {
+  .timeline-centered,
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-content {
+    width: 50%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+}
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: #FF6B6B;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+  background: #FF6B6B;
+}
 html,
 body {
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -645,6 +864,7 @@ body {
 }
 .navmenu li a {
   transition: none !important;
+  white-space: nowrap;
 }
 .navmenu .calc-border {
   border: 1px solid #bdcb02;
@@ -790,6 +1010,7 @@ a#city:hover {
 }
 a#tel {
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   a#tel {
@@ -967,25 +1188,50 @@ a#tel {
   font-size: 0.9rem;
 }
 .popular-nav .pop-prev,
-.popular-nav .pop-next {
+.popular-nav .pop-next,
+.popular-nav .work-prev,
+.popular-nav .work-next,
+.popular-nav .gallery-next,
+.popular-nav .gallery-prev {
   border: 2px solid #c7c7c7;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
 }
 .popular-nav .pop-prev svg,
-.popular-nav .pop-next svg {
+.popular-nav .pop-next svg,
+.popular-nav .work-prev svg,
+.popular-nav .work-next svg,
+.popular-nav .gallery-next svg,
+.popular-nav .gallery-prev svg,
+.popular-nav .pop-prev .svg,
+.popular-nav .pop-next .svg,
+.popular-nav .work-prev .svg,
+.popular-nav .work-next .svg,
+.popular-nav .gallery-next .svg,
+.popular-nav .gallery-prev .svg {
   fill: #686868;
+  object-fit: contain;
 }
 .popular-nav .pop-prev:hover,
-.popular-nav .pop-next:hover {
+.popular-nav .pop-next:hover,
+.popular-nav .work-prev:hover,
+.popular-nav .work-next:hover,
+.popular-nav .gallery-next:hover,
+.popular-nav .gallery-prev:hover {
   transition: all 200ms ease-in-out;
   background: #c7c7c7;
 }
-.popular-nav .pop-prev {
+.popular-nav .pop-prev,
+.popular-nav .work-prev,
+.popular-nav .gallery-prev {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.popular-nav.mobile div {
+  width: 3rem!important;
+  height: 3rem!important;
 }
 .product-container .item {
   transition: all 200ms ease-in-out;
@@ -1072,6 +1318,7 @@ footer .atom {
   background-repeat: no-repeat;
   padding-left: 1.2rem;
   background-size: .9rem;
+  white-space: nowrap;
 }
 .breadcrumb {
   background-color: transparent;
@@ -1100,6 +1347,9 @@ footer .atom {
 }
 .page-menu .menu-item.active .primary-link {
   color: #bdcb02 !important;
+}
+.page-menu .menu-item.active .primary-link:hover {
+  text-decoration: none;
 }
 .page-menu .menu-item.active .primary-link::before {
   background: #bdcb02;
@@ -1232,5 +1482,79 @@ footer .atom {
 }
 .figure-container div p {
   line-height: 1.3;
+}
+.catalog-description .description {
+  font-size: .9rem;
+}
+.catalog-item .price {
+  background: #fff7e6;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.catalog-item .buy img {
+  -webkit-filter: brightness(0) invert(0.7);
+          filter: brightness(0) invert(0.7);
+}
+.catalog-item .buy a {
+  color: #f47e23;
+  border-bottom: 1px solid #f47e23;
+  line-height: 1.2;
+}
+.catalog-item .buy a:hover {
+  text-decoration: none;
+  color: #f69a54;
+  border-bottom: 1px solid #f69a54;
+}
+.catalog-item .item-description {
+  font-size: .9rem;
+}
+.item-table {
+  font-size: .9rem;
+}
+.additional-options .description p {
+  font-size: 14px;
+  line-height: 25px;
+}
+#work-slider .work-image {
+  overflow: hidden;
+}
+#work-slider .work-image img {
+  height: 350px;
+}
+#work-slider .work-image img.no-img {
+  height: 350px;
+  top: 0;
+  left: -10%;
+  -webkit-filter: brightness(0) invert(0.7);
+          filter: brightness(0) invert(0.7);
+  z-index: -1;
+  opacity: .1;
+}
+#work-slider .firm {
+  background: #d8df99;
+}
+#work-slider .description,
+#work-slider .info {
+  font-size: .9rem;
+}
+#work-slider .popular-nav div {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+#product-gallery .item img {
+  height: 170px;
+}
+.product-nav {
+  top: 0;
+  height: 170px;
+}
+.product-nav div {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.product-nav div.gallery-prev {
+  right: 102%;
+}
+.product-nav div.gallery-next {
+  left: 102%;
 }
 /*# sourceMappingURL=./styles.css.map */
